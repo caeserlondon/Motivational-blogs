@@ -5,11 +5,7 @@ const Navbar = () => {
 	return (
 		<nav className={styles.navbar}>
 			<img src={IMG} alt="icon" />
-			<Link href="/">
-				<a>
-					<li>Home</li>
-				</a>
-			</Link>
+			<Link href="/">Motivational Blogs</Link>
 		</nav>
 	);
 };
