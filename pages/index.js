@@ -3,7 +3,7 @@ import styles from '../styles/Home.module.css';
 import { GraphQLClient, gql } from 'graphql-request';
 import BlogCard from '../components/BlogCard';
 
-const graphcms = new GraphQLClient('process.env.Content_API');
+const graphcms = new GraphQLClient(process.env.CONTENT_API);
 
 const QUERY = gql`
 	{
@@ -54,7 +54,6 @@ export default function Home({ posts }) {
 						title={post.title}
 						datePublished={post.datePublished}
 						slug={post.slug}
-						// coverPhoto={post.coverPhoto.url}
 						coverPhoto={post.coverPhoto}
 						author={post.author}
 					/>
