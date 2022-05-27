@@ -1,6 +1,7 @@
 import Head from 'next/head';
 import styles from '../styles/Home.module.css';
 import { GraphQLClient, gql } from 'graphql-request';
+import Navbar from '../components/Navbar';
 import BlogCard from '../components/BlogCard';
 
 const graphcms = new GraphQLClient(process.env.CONTENT_API);
@@ -48,6 +49,7 @@ export default function Home({ posts }) {
 			</Head>
 
 			<main className={styles.main}>
+				{/* <Navbar /> */}
 				{posts.map((post) => (
 					<BlogCard
 						key={post.id}
